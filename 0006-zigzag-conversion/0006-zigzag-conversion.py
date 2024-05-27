@@ -5,13 +5,13 @@ class Solution:
         current = 0
         dir = 1
         print(s, numRows)
-        
+        if numRows == 1:
+            return s
         for i in s:
             print("iii",i, "curr:",current, "dir", dir)
             rows[current] += i
-            if current == 0 and numRows == 1:
-                dir = 0
-            elif current == 0:
+            
+            if current == 0:
                 dir = 1
             elif current == (numRows-1):
                 print("ivde")
